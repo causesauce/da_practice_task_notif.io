@@ -6,12 +6,11 @@ from starlette.status import HTTP_401_UNAUTHORIZED, HTTP_201_CREATED, HTTP_204_N
 from tortoise.contrib.fastapi import register_tortoise
 
 from models import MessageInputValidated, Message, Message_Pydantic, MessageInput, get_all, get_by_id, add_message, \
-    update_message, delete_message
+    update_message, delete_message, get_all_with_ids
 
 app = FastAPI()
 
-
-API_KEY = "ed049313-16eb-4fc1-aa36-398d21255f76"
+API_KEY = "ed049313-16eb-4fc1-aa36-398d21255f76112d"
 API_KEY_NAME = "access_token"
 
 api_key_query = APIKeyQuery(name=API_KEY_NAME, auto_error=False)
@@ -35,6 +34,12 @@ async def get_api_key(
 @app.get("/messages", status_code=HTTP_200_OK)
 async def get_messages():
     response_list = await get_all()
+    return response_list
+
+
+@app.get("/messages/with-id", status_code=HTTP_200_OK)
+async def get_messages():
+    response_list = await get_all_with_ids()
     return response_list
 
 

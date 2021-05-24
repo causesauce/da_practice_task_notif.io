@@ -48,6 +48,8 @@ class Message(Model):
 
 Message_Pydantic = pydantic_model_creator(Message, name="MessageOut", exclude=('id_message',))
 
+Message_Pydantic_With_Id = pydantic_model_creator(Message, name="MessageOutWithIds")
+
 
 async def delete_message(id_message: int):
     message = await Message.get(id_message=id_message)
@@ -67,11 +69,20 @@ async def update_message(message_input: MessageInput, id_message: int):
     message.body = message_input_model.body
     message.counter = ZERO_MESSAGE_COUNTER
     await message.save()
-    message = await Message_Pydantic.from_tortoise_orm(message)
+    message = await Message_Pydantic_With_Id.from_tortoise_orm(message)
     return message
 
 
 async def get_all():
+    messages = await Message.all()
+    response = list()
+    for message in messages:
+        await message.increase_counter()
+        response.append(await Message_Pydantic.from_tortoise_orm(message))
+    return response
+
+
+async def get_all_with_ids():
     messages = await Message.all()
     response = list()
     for message in messages:
