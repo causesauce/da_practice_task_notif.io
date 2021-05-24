@@ -38,19 +38,19 @@ async def get_messages():
 
 
 @app.get("/messages/with-id", status_code=HTTP_200_OK)
-async def get_messages():
+async def get_message_with_id():
     response_list = await get_all_with_ids()
     return response_list
 
 
 @app.get("/messages/{id_message}", status_code=HTTP_200_OK)
-async def get_messages_by_id(id_message: PositiveInt):
+async def get_message_by_ids(id_message: PositiveInt):
     response = await get_by_id(id_message)
     return response
 
 
 @app.post("/messages", status_code=HTTP_201_CREATED)
-async def post_message_endpoint(message_input: MessageInput = None, api_key: APIKey = Depends(get_api_key)):
+async def post_new_message(message_input: MessageInput = None, api_key: APIKey = Depends(get_api_key)):
     if message_input is None:
         raise HTTPException(status_code=HTTP_400_BAD_REQUEST, detail="body should not be empty")
     message_obj = await add_message(message_input)
@@ -58,7 +58,7 @@ async def post_message_endpoint(message_input: MessageInput = None, api_key: API
 
 
 @app.put("/messages/{id_message}")
-async def update_message_endpoint(
+async def update_message_body(
         id_message: PositiveInt,
         message_input: MessageInput = None,
         api_key: APIKey = Depends(get_api_key)

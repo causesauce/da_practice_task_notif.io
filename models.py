@@ -69,7 +69,7 @@ async def update_message(message_input: MessageInput, id_message: int):
     message.body = message_input_model.body
     message.counter = ZERO_MESSAGE_COUNTER
     await message.save()
-    message = await Message_Pydantic_With_Id.from_tortoise_orm(message)
+    message = await Message_Pydantic.from_tortoise_orm(message)
     return message
 
 
@@ -87,7 +87,7 @@ async def get_all_with_ids():
     response = list()
     for message in messages:
         await message.increase_counter()
-        response.append(await Message_Pydantic.from_tortoise_orm(message))
+        response.append(await Message_Pydantic_With_Id.from_tortoise_orm(message))
     return response
 
 
