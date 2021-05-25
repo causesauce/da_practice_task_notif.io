@@ -58,8 +58,6 @@ If message exists, its counter is increased by 1 every time this message is retr
 1. GET /messages [UNSECURED]
     <br><br>
     Link:  https://not-io-practice-task.herokuapp.com/messages
-
-
     
     METHOD: GET
 
@@ -71,7 +69,6 @@ If message exists, its counter is increased by 1 every time this message is retr
 2. GET /messages/with-id [UNSECURED]
     <br><br>
     Link:   https://not-io-practice-task.herokuapp.com/messages/with-id
-    <br>
      
     METHOD: GET
    
@@ -82,7 +79,6 @@ If message exists, its counter is increased by 1 every time this message is retr
 3. GET /messages/{id_message} [UNSECURED]
     <br><br>
     Link: this link should be appended with ID of the message you want to retrieve https://not-io-practice-task.herokuapp.com/messages
-    <br>
 
     METHOD: GET
 
@@ -96,7 +92,6 @@ If message exists, its counter is increased by 1 every time this message is retr
 returns status code 401 if user is not authenticated
    <br><br>
     Link: https://not-io-practice-task.herokuapp.com/messages/
-    <br>
 
     METHOD: POST
 
@@ -120,8 +115,7 @@ returns status code 401 if user is not authenticated
 5. PUT /messages/{id_message} [SECURED] ( needs authentication to impact the data ) 
    returns status code 401 if user is not authenticated
     <br><br>
-    Link: this link should be appended with ID of the message you want to update https://not-io-practice-task.herokuapp.com/messages/   
-    <br>
+    Link: this link should be appended with ID of the message you want to update https://not-io-practice-task.herokuapp.com/messages/
     
     METHOD: PUT    
 
@@ -148,8 +142,7 @@ returns status code 401 if user is not authenticated
 6.  DELETE /messages/{id_message} [SECURED] ( needs authentication to impact the data ) 
    returns status code 401 if user is not authenticated
     <br><br>
-    Link: this link should be appended with ID of the message you want to delete https://not-io-practice-task.herokuapp.com/messages/   
-    <br>
+    Link: this link should be appended with ID of the message you want to delete https://not-io-practice-task.herokuapp.com/messages/
 
     METHOD: PUT
 
