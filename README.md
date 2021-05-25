@@ -174,5 +174,5 @@ along with code files. Afterwards it runs the taken code in accordance with opti
 
 
 
-###### Work done by Adrian Chervinchuk 
+###### Work is done by Adrian Chervinchuk 
 
