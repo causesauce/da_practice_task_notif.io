@@ -19,7 +19,6 @@
         * Header -  ![img.png](img.png)
         where instead [YOUR API KEY] provide your API ( the key from the upper section )
  
- 
         * 
 
  
