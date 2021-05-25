@@ -56,10 +56,10 @@ If message exists, its counter is increased by 1 every time this message is retr
 
 
 5. PUT /messages/{id_message}  -  receives a message in JSON body and id of the message to be modified; returns
-   status code 204 and details with modified message body in case the message was modified successfully, otherwise returns status code 404
+   status code 200 and details with the modified messages body in case the message was found and modified, otherwise returns status code 404
 
 
-6. DELETE /messages/{id_message}  -  simply takes id of a message, returns status code 204 in case message was deleted successfully,
+6. DELETE /messages/{id_message}  -  simply takes id of a message, returns status code 204 in case message found and was deleted successfully,
    otherwise returns status code 404
 
 
@@ -140,7 +140,7 @@ returns status code 401 if user is not authenticated
     Performs: validates the input and updates the instance of a message with
                if validation passed. Body should be between 1 and 160 characters.
 
-    Returns: status code 204 and a small piece of information about the updated message, or status code 404 if message with the id doesn't exist
+    Returns: status code 200 and a small piece of information about the updated message, or status code 404 if message with the ID doesn't exist
 
     Request example: https://not-io-practice-task.herokuapp.com/messages/4
                       {
@@ -158,11 +158,11 @@ returns status code 401 if user is not authenticated
 
     METHOD: PUT
 
-    Returns: status code 204 and a small smail piece of information, or status code 404 if message with the id doesn't exist
+    Returns: status code 204, or status code 404 if message with the message with the ID doesn't exist
 
     Request example: https://not-io-practice-task.herokuapp.com/messages/4
 
-    Response example:  {"details":"success"}
+    Response example:  status code 204
     
 ## Consists of
 
