@@ -4,6 +4,7 @@ aniso8601==7.0.0
 async-exit-stack==1.0.1
 async-generator==1.10
 atlastk==0.12.10
+atomicwrites==1.4.0
 attrs==21.2.0
 bcrypt==3.2.0
 certifi==2020.12.5
@@ -24,6 +25,7 @@ graphql-core==2.3.2
 graphql-relay==2.0.1
 h11==0.12.0
 idna==2.10
+iniconfig==1.1.1
 iso8601==0.1.14
 itsdangerous==1.1.0
 Jinja2==2.11.3
@@ -33,9 +35,12 @@ MarkupSafe==2.0.1
 matplotlib==3.4.2
 numpy==1.20.3
 orjson==3.5.2
+packaging==20.9
 passlib==1.7.4
 Pillow==8.2.0
+pluggy==0.13.1
 promise==2.3
+py==1.10.0
 pyasn1==0.4.8
 pycparser==2.20
 pydantic==1.8.2
@@ -43,6 +48,7 @@ PyJWT==2.1.0
 pyparsing==2.4.7
 pypika-tortoise==0.1.1
 pyrsistent==0.17.3
+pytest==6.2.4
 python-dateutil==2.8.1
 python-dotenv==0.17.1
 python-jose==3.2.0
@@ -54,6 +60,7 @@ rsa==4.7.2
 Rx==1.6.1
 six==1.16.0
 starlette==0.14.2
+toml==0.10.2
 tortoise==0.1.1
 tortoise-orm==0.17.3
 typing-extensions==3.10.0.0
