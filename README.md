@@ -67,7 +67,7 @@ If message exists, its counter is increased by 1 every time this message is retr
    
     Example response: [{"body":"11","counter":4},{"body":"Hello world","counter":8}]
 
-
+<br>
 2. GET /messages/with-id [UNSECURED]
     <br><br>
     Link:   https://not-io-practice-task.herokuapp.com/messages/with-id
