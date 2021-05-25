@@ -53,7 +53,7 @@ If message exists, its counter is increased by 1 every time this message is retr
 
 ## Specification
 
-##### All the following examples are done with using API Key in header
+##### All the following examples are done using API Key in a header
 <br>
 1. GET /messages [UNSECURED]
     <br><br>
