@@ -26,6 +26,18 @@
 
         I prefere and recommend to use 'the header' method not to reveal the key in the URL.
 
+Code example with the header:
+
+
+![img.png](img.png)
+
+
+Code example with url
+
+
+![img_1.png](img_1.png)
+
+
 In total there are 6 endpoints related to the API.
 
 1. GET /messages  -  returns list of all messages and status code 200 (body and counter for every message). 
