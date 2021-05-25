@@ -60,6 +60,7 @@ If message exists, its counter is increased by 1 every time this message is retr
     Link:  https://not-io-practice-task.herokuapp.com/messages
 
 
+    
     METHOD: GET
 
     Returns: all messages without their IDs in JSON Format along with status code 200 (if there are no messages return an empty list)
