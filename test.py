@@ -4,11 +4,26 @@ import pytest
 import requests
 
 
+# -------------------------------------testing get----------------------------------------
 # testing "/messages/{message_id} endpoint with nonexistent id
 def test_get_by_id():
     url = "https://not-io-practice-task.herokuapp.com/messages/1000"
     response = requests.get(url=url)
     assert response.status_code == 404
+
+
+def test_get_messages_with_id():
+    url = "https://not-io-practice-task.herokuapp.com/messages/with-id"
+    response = requests.get(url=url)
+    assert response.status_code == 200
+    assert len(response.text) != 0
+
+
+def test_get_messages():
+    url = "https://not-io-practice-task.herokuapp.com/messages/"
+    response = requests.get(url=url)
+    assert response.status_code == 200
+    assert len(response.text) != 0
 
 
 # -----------------------------------------testing secure endpoints for actual security----------------------------
@@ -44,16 +59,27 @@ def test_post_put_delete_message():
     response = requests.post(url, message_data, headers=headers)
     assert response.status_code == 201
 
-    # put
     # "message with id {message_obj.id_message} has been created"
     created_message_id = int(response.text.split(" ")[3])
 
+    url += '/' + str(created_message_id)
+
+    # get
+    response = requests.get(url=url)
+    assert response.status_code == 200
+    assert response.text == """{"body":"message_trial","counter":1}"""
+
+    # put
     message_data = """{"body": "message_trial_changed"}"""
-    url += '/'+str(created_message_id)
+
     response = requests.put(url, message_data, headers=headers)
-    #assert response.status_code == 204
-    assert json.loads(response.content) == 'dwqdqwdwqdqwdqwdqw'
+    assert response.status_code == 200
     assert json.loads(response.text)["detail"] == f"message with the id {created_message_id} has been modified"
+
+    # get
+    response = requests.get(url=url)
+    assert response.status_code == 200
+    assert response.text == """{"body":"message_trial_changed","counter":1}"""
 
     # delete
     response = requests.delete(url, headers=headers)
@@ -62,4 +88,3 @@ def test_post_put_delete_message():
     # get
     response = requests.get(url=url)
     assert response.status_code == 404
-
