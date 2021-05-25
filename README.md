@@ -53,6 +53,8 @@ If message exists, its counter is increased by 1 every time this message is retr
 
 ## Specification
 
+##### All the following examples are done with using API Key in header
+<br>
 1. GET /messages [UNSECURED]
     <br><br>
     Link:  https://not-io-practice-task.herokuapp.com/messages
