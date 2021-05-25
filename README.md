@@ -20,9 +20,9 @@
         - Header: add such a header to your http request <access_token : [YOUR API KEY]>
         where instead of [YOUR API KEY] provide your API Key ( the key from the upper section for example  )
         
-        - Query Parameter / URL: add you key to the end of your URL in your HTTP request as show here
-        https://not-io-practice-task.herokuapp.com/messages/[SOME PARAMETER]?access_token=[YOUR API KEY]
-        where instead of [YOUR API KEY] provide your API Key ( the key from the upper section for example )
+        - Query Parameter / URL: add your key to the end of your URL in your HTTP request as shown here
+        https://not-io-practice-task.herokuapp.com/messages/[SOME_PARAMETER]?access_token=[YOUR_API_KEY]
+        where instead of [YOUR_API_KEY] provide your API Key ( the key from the upper section for example )
 
         I prefere and recommend to use 'the header' method not to reveal the key in the URL.
 
@@ -121,7 +121,7 @@ returns status code 401 if user is not authenticated
 
     Accepts in body: PUT request with JSON form in body to update new message. Form should be as follows
                   {
-                     "body" : "[YOUR MESSAGE]"
+                     "body" : "[YOUR_MESSAGE]"
                   }
                   otherwise it will be rejected.
    
