@@ -72,7 +72,7 @@ If message exists, its counter is increased by 1 every time this message is retr
      
     METHOD: GET
    
-    Return: the same as previous, but including an IDs of the messages; returns status code 200
+    Return: the same as previous, but including IDs of the messages; returns status code 200 (if there are no messages return an empty list)
 
     Response example: [{"id_message":1,"body":"11","counter":6},{"id_message":2,"body":"How is the weather today?","counter":1},{"id_message":3,"body":"Night sky is such a mystery","counter":2}]
 <br>
@@ -152,3 +152,7 @@ returns status code 401 if user is not authenticated
 
     Response example:  {"details":"success"}
     
+## Consists of
+
+All the related libraries are specified in requirements.txt in this repository.
+There were used Python 3.8.5, tortoise-orm, pydantic, FastAPI, sqlite3 and a few other libraries.

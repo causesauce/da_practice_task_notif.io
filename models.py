@@ -1,9 +1,8 @@
 from typing import Optional
 
-from fastapi import HTTPException, FastAPI
+from fastapi import HTTPException
 from pydantic import BaseModel, constr, PositiveInt, validator
 from tortoise import Model, fields
-from passlib.hash import bcrypt
 from tortoise.contrib.pydantic import pydantic_model_creator
 
 ZERO_MESSAGE_COUNTER = 0
