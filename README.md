@@ -156,7 +156,7 @@ returns status code 401 if user is not authenticated
 
 All the related libraries are specified in requirements.txt in this repository.
 There were used Python 3.8.5, tortoise-orm, pydantic, FastAPI, sqlite3.
-The database scheme looks as follows:
+The database schema looks as follows:
 
 
 ![img_2.png](img_2.png)
