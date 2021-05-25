@@ -1,6 +1,6 @@
 # da_practice_task_notif.io
 
------------
+
 ## description
  The API basically works on link: https://not-io-practice-task.herokuapp.com/
  
@@ -50,7 +50,6 @@ If message exists, its counter is increased by 1 every time this message is retr
 6. DELETE /messages/{id_message}  -  simply takes id of a message, returns status code 204 in case message was deleted successfully,
    otherwise returns status code 404
 
------------
 
 ## Specification
 
