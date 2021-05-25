@@ -155,4 +155,22 @@ returns status code 401 if user is not authenticated
 ## Consists of
 
 All the related libraries are specified in requirements.txt in this repository.
-There were used Python 3.8.5, tortoise-orm, pydantic, FastAPI, sqlite3 and a few other libraries.
+There were used Python 3.8.5, tortoise-orm, pydantic, FastAPI, sqlite3.
+The database scheme looks as follows:
+![img_2.png](img_2.png)
+
+
+## Deployment
+
+The application is deployed on the Heroku hosting with free plan https://dashboard.heroku.com/.
+This is why when you try to interact with the API, it takes a bit more time than usual.
+That is why when you're addressing the link, the hosting runs the app ( normally it goes idle after some time ).
+So to deploy app it connects to this git-hub repository and downloads the libraries specified in requirements.txt
+along with code files. Afterwards it runs the taken code in accordance with options specified in Procfile.
+
+
+
+
+
+###### Work done by Adrian Chervinchuk 
+
