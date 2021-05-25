@@ -15,8 +15,11 @@
  
  To access secured endpoints please provide the given key either within a header or specifying it in the
  url. Examples:
+ 
         * Header -  ![img.png](img.png)
         where instead [YOUR API KEY] provide your API ( the key from the upper section )
+ 
+ 
         * 
 
  
