@@ -15,8 +15,12 @@
  
  To access secured endpoints please provide the given key either within a header or specifying it in the
  url. Examples:
-        * Header -  ![img.png](img.png)
-        where instead [YOUR API KEY] provide your API ( the key from the upper section )
-        * 
+
+        - Header: add such a header to your http request ![img_1.png](img_1.png)
+        where instead of [YOUR API KEY] provide your API Key ( the key from the upper section for example  )
+        
+        - Query Parameter / URL: add you key to the end of your URL in your HTTP request as show here
+        https://not-io-practice-task.herokuapp.com/messages/111?access_token=[YOUR API KEY]
+        where instead of [YOUR API KEY] provide your API Key ( the key from the upper section for example )
 
  
