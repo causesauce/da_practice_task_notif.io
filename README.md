@@ -32,7 +32,7 @@ Code example with the header:
 ![img.png](img.png)
 
 
-Code example with url
+Code example with URL:
 
 
 ![img_1.png](img_1.png)
