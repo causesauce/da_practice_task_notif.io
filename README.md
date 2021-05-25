@@ -71,18 +71,18 @@ If message exists, its counter is increased by 1 every time this message is retr
 2. GET /messages/with-id [UNSECURED]
     <br><br>
     Link:   https://not-io-practice-task.herokuapp.com/messages/with-id
-
+    <br>
      
     METHOD: GET
    
     Return: the same as previous, but including an IDs of the messages; returns status code 200
 
     Response example: [{"id_message":1,"body":"11","counter":6},{"id_message":2,"body":"How is the weather today?","counter":1},{"id_message":3,"body":"Night sky is such a mystery","counter":2}]
-
+<br>
 3. GET /messages/{id_message} [UNSECURED]
     <br><br>
     Link: this link should be appended with ID of the message you want to retrieve https://not-io-practice-task.herokuapp.com/messages
-
+    <br>
 
     METHOD: GET
 
@@ -91,12 +91,12 @@ If message exists, its counter is increased by 1 every time this message is retr
     Request example: https://not-io-practice-task.herokuapp.com/messages/3
 
     Response example: {"body":"Night sky is such a mystery","counter":1} 
-
+<br>
 4. POST /messages [SECURED] ( needs authentication to impact the data )
 returns status code 401 if user is not authenticated
    <br><br>
     Link: https://not-io-practice-task.herokuapp.com/messages/
-
+    <br>
 
     METHOD: POST
 
@@ -116,12 +116,12 @@ returns status code 401 if user is not authenticated
                       }
 
     Response example:  "message with id 4 has been created"
-
+<br>
 5. PUT /messages/{id_message} [SECURED] ( needs authentication to impact the data ) 
    returns status code 401 if user is not authenticated
     <br><br>
     Link: this link should be appended with ID of the message you want to update https://not-io-practice-task.herokuapp.com/messages/   
-
+    <br>
     
     METHOD: PUT    
 
@@ -144,12 +144,12 @@ returns status code 401 if user is not authenticated
     Response example:  {"detail":"message with the id 4 has been modified","message":{"body":"Want some changes","counter":0}}
    
 
-
+<br>
 6.  DELETE /messages/{id_message} [SECURED] ( needs authentication to impact the data ) 
    returns status code 401 if user is not authenticated
     <br><br>
     Link: this link should be appended with ID of the message you want to delete https://not-io-practice-task.herokuapp.com/messages/   
-    
+    <br>
 
     METHOD: PUT
 
