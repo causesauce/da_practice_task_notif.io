@@ -57,7 +57,7 @@ async def post_new_message(message_input: MessageInput = None, api_key: APIKey =
     return f'message with id {message_obj.id_message} has been created'
 
 
-@app.put("/messages/{id_message}")
+@app.put("/messages/{id_message}", status_code=204)
 async def update_message_body(
         id_message: PositiveInt,
         message_input: MessageInput = None,
@@ -70,7 +70,7 @@ async def update_message_body(
             "message": message}
 
 
-@app.delete("/messages/{id_message}", status_code=200)
+@app.delete("/messages/{id_message}", status_code=204)
 async def delete_message_endpoint(id_message: PositiveInt, api_key: APIKey = Depends(get_api_key)):
     await delete_message(id_message)
     return {"details": "success"}
